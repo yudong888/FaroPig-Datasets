@@ -25,6 +25,21 @@ All images and their corresponding annotations are randomly divided into three f
 │── data.yaml
 
 
+```/FaroPigSeg/
+.
+├── train/
+│   ├── images/
+│   └── labels/
+├── train/
+│   ├── images/
+│   └── labels/
+├── train/
+│   ├── images/
+│   └── labels/
+└── data.yaml
+```
+
+
 - **train**: Contains 70% of all the images and corresponding labels.
 - **val**: Contains 20% of all the images and corresponding labels.
 - **test**: Contains 10% of all the images and corresponding labels.
