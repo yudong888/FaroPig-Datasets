@@ -35,7 +35,7 @@ FaroPigSeg
 Each annotation file corresponds to an image file (same name, `.txt` extension).
 
 Format:
-<class_id> <x1> <y1> <x2> <y2> ... <xn> <yn>
+\<class_id\> \<x1\> \<y1\> \<x2\> \<y2\> ... \<xn\> \<yn\>
 - **\<class_id\>**: Integer representing the class index (always 0 as we only have one class).
 - **\<x, y\> pairs**: Normalized (0 to 1) polygon coordinates outlining the object.
 
