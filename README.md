@@ -11,7 +11,6 @@ The dataset FaroPigSeg is created for the instance segmentation task introduced 
 ### Dataset Structure
 
 All images and their corresponding annotations are randomly divided into three folders according to a certain ratio: train, val, and test.
-
 ```plaintext
 FaroPigSeg
 ├── train/
@@ -33,9 +32,7 @@ FaroPigSeg
 ### Annotation Format (YOLO Segmentation)
 
 Each annotation file corresponds to an image file (same name, `.txt` extension).
-
 Format:
-
 \<class_id\> \<x1\> \<y1\> \<x2\> \<y2\> ... \<xn\> \<yn\>
 - **\<class_id\>**: Integer representing the class index (always 0 as we only have one class).
 - **\<x, y\> pairs**: Normalized (0 to 1) polygon coordinates outlining the object.
@@ -47,7 +44,6 @@ Format:
 ## FaroPigReID-33
 
 The dataset FaroPigReID-33 is created for the pig reidentification task introduced in the paper. It is taken from three video clips with around 1620, 16200, and 2700 frames respectively, and it has 33 valid identities in total. The process of creating the dataset is semi-automatic by combining SAM with the point tracker Co-tracker, and then a filtering procedure was conducted to remove the individuals with low diversity and richness. At last, we capped the dataset with 4000 frames per individual by uniformly selecting the frames of every individual in the temporal axis. The final dataset contains 33 identities, with around 300 to 4,000 masks per individual, as shown in the following figure.
-
 ![Bar Chart](dataset_4000.png)
 
 ### Dataset Structure
@@ -82,7 +78,6 @@ FaroPigReID-33
 ### Annotation Format
 
 All the annotations have been saved in `dataset_im_filtered_ssl.csv`.
-
 Format:
 <path> <label> <width> <height> <xmin> <xmax> <ymin> <ymax> <valid> <main_path>
 - **\<path\>**: The image path corresponding to the annotation.
@@ -91,9 +86,7 @@ Format:
 - **\<xmin\> \<xmax\> \<ymin\> \<ymax\>**: Bounding box location of the individual in the frame.
 - **\<valid\>**: Validity of the annotation (1.0=valid, 0.0=invalid).
 - **\<main_path\>**: The frame path corresponding to the annotation.
-
 **Note**: In the \<path\> column, we only listed the path of the images. If you need the path of the masks, please change "Images" to "Masks".
-
 **Example**:
 - `"Images/D/id_D_frame_00002160_img.png"` is the image path of the identity D.
 - Its corresponding mask path is `"Masks/D/id_D_frame_00002160_img.png"`.
