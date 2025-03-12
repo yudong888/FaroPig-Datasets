@@ -109,7 +109,7 @@ Format:
 
 ## License
 
-Both datasets are licensed under the Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0).
+Both datasets FaroPigSeg and FaroPigReID-33 are licensed under the Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0).
 
 You are free to use, share, and modify the datasets for non-commercial purposes only.
 
