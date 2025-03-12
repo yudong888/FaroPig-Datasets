@@ -24,7 +24,6 @@ All images and their corresponding annotations are randomly divided into three f
 │   ├── images/
 │   └── labels/
 └── data.yaml
-```
 
 
 - **train**: Contains 70% of all the images and corresponding labels.
