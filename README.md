@@ -1,69 +1,117 @@
-# datasets-pigs
-Datasets for pig re-identification and related tasks
+# FaroPigSeg & FaroPigReID-33: Datasets for Pig Segmentation and Reidentification
 
-There are two datasets in total for the project:
-1. FaroPigReID-33
-   This dataset is created for pig re-identification task, and it consists of 33 identities of mature pigs with around 300 to 4000 masks per individual.
+FaroPigSeg & FaroPigReID-33 are public datasets for pig segmentation and reidentification introduced in the paper [Housed Pig Identification and Tracking for Precision Livestock Farming](https://web.ub.edu/en/home).
 
-2. FaroPigSeg
-   This dataset is created for pig instance segmentation task, and it consists of 1518 images annotated with masks. The images covers 3 production cycles (one year) of a commercial wean to finish farm.
+The datasets were created with the support of the University of Barcelona and AGCO Corporation, and all the images were collected in a commercial pig finishing farm. The right to collect data and make datasets public has been granted by the company and the farmers.
 
-We are now in the process of some legal paperwork for making the datasets public and will release the datasets as soon as possible...
+## FaroPigSeg
 
-# 数据集名称
+The dataset FaroPigSeg is created for the instance segmentation task introduced in the paper. It contains 1518 annotated pig images, and more than 16,000 pig instances were labeled in total. The images were collected from different pens of the farm, and the labels are in the YOLO format.
 
-简短描述数据集的内容和用途。
+### Dataset Structure
 
-## 数据集概述
+All images and their corresponding annotations are randomly divided into three folders according to a certain ratio: train, val, and test.
 
-- **数据集名称**: 数据集名称
-- **作者**: 作者姓名或组织
-- **发布日期**: YYYY-MM-DD
-- **版本**: 版本号 (如 v1.0)
-- **许可证**: 数据集许可证 (如 CC BY 4.0)
-- **数据集大小**: 数据集大小 (如 1GB)
-- **文件格式**: 文件格式 (如 CSV, JSON, Parquet)
+/FaroPigSeg/
+│── train/
+│ ├── images/
+│ ├── labels/
+│── val/
+│ ├── images/
+│ ├── labels/
+│── test/
+│ ├── images/
+│ ├── labels/
+│── data.yaml
 
-## 数据集描述
 
-详细描述数据集的内容、来源、收集方法和用途。
+- **train**: Contains 70% of all the images and corresponding labels.
+- **val**: Contains 20% of all the images and corresponding labels.
+- **test**: Contains 10% of all the images and corresponding labels.
+- **data.yaml**: List of classes and configuration of the paths for training.
 
-### 数据来源
+### Annotation Format (YOLO Segmentation)
 
-说明数据来源，如公开数据库、实验数据或网络爬取。
+Each annotation file corresponds to an image file (same name, `.txt` extension).
 
-### 数据收集方法
+Format:
+<class_id> <x1> <y1> <x2> <y2> ... <xn> <yn>
 
-描述数据收集的过程和工具。
 
-### 数据结构
+- **\<class_id\>**: Integer representing the class index (always 0 as we only have one class).
+- **\<x, y\> pairs**: Normalized (0 to 1) polygon coordinates outlining the object.
 
-列出数据集包含的文件及其结构：
+### Download
 
-- `data/`: 包含所有数据文件
-  - `file1.csv`: 描述文件内容
-  - `file2.json`: 描述文件内容
-- `docs/`: 包含相关文档
-  - `documentation.pdf`: 详细文档
+[FaroPigSeg Dataset on Kaggle](https://www.kaggle.com/datasets/yudongyan/faropigseg)
 
-## 数据字段说明
+## FaroPigReID-33
 
-列出数据集中的字段及其含义：
+The dataset FaroPigReID-33 is created for the pig reidentification task introduced in the paper. It is taken from three video clips with around 1620, 16200, and 2700 frames respectively, and it has 33 valid identities in total. The process of creating the dataset is semi-automatic by combining SAM with the point tracker Co-tracker, and then a filtering procedure was conducted to remove the individuals with low diversity and richness. At last, we capped the dataset with 4000 frames per individual by uniformly selecting the frames of every individual in the temporal axis. The final dataset contains 33 identities, with around 300 to 4,000 masks per individual, as shown in the following figure.
 
-| 字段名 | 类型 | 描述 |
-|--------|------|------|
-| field1 | 类型 | 描述 |
-| field2 | 类型 | 描述 |
+![Bar Chart](media/image1.png)
 
-## 使用示例
+### Dataset Structure
 
-提供使用数据集的代码示例：
+The final dataset consists of frames taken from video clips, annotation, and cropped images of every identity and its corresponding masks.
+/FaroPigReID-33/
+│── Galleries/
+│ ├── 2023-09-28T15_59_48Z-left_2160_9720/
+│ ├── images/
+│ ├── A/
+│ ├── B/
+│ ...
+│ ├── I/
+│ ├── masks/
+│ ├── A/
+│ ├── B/
+│ ...
+│ ├── I/
+│ ├── 2024-01-05T09_43_39Z-left_14700_29369/
+│ ├── 2024-02-27T14_54_53Z-left_15660_27000/
+│── Frames/
+│ ├── 2023-09-28T15_59_48Z-left_2160_9720/
+│ ├── 2024-01-05T09_43_39Z-left_14700_29369/
+│ ├── 2024-02-27T14_54_53Z-left_15660_27000/
+│── dataset_im_filtered_ssl.csv
 
-```python
-import pandas as pd
 
-# 加载数据集
-data = pd.read_csv('data/file1.csv')
+- **Galleries**: Directory of the images cropped according to the bounding boxes of the individuals and its corresponding masks. Inside the images and masks folder, all the images and masks are categorized according to identity label.
+- **Frames**: The original images extracted from the videos.
+- **dataset_im_filtered_ssl.csv**: The collection of all the annotations.
 
-# 显示前几行
-print(data.head())
+### Annotation Format
+
+All the annotations have been saved in `dataset_im_filtered_ssl.csv`.
+
+Format:
+<path> <label> <width> <height> <xmin> <xmax> <ymin> <ymax> <valid> <main_path>
+
+- **\<path\>**: The image path corresponding to the annotation.
+- **\<label\>**: The identity label of the individual.
+- **\<width\> \<height\>**: Dimension of the bounding box of the individual.
+- **\<xmin\> \<xmax\> \<ymin\> \<ymax\>**: Bounding box location of the individual in the frame.
+- **\<valid\>**: Validity of the annotation (1.0=valid, 0.0=invalid).
+- **\<main_path\>**: The frame path corresponding to the annotation.
+
+**Note**: In the \<path\> column, we only listed the path of the images. If you need the path of the masks, please change "Images" to "Masks".
+
+**Example**:
+- `"Images/D/id_D_frame_00002160_img.png"` is the image path of the identity D.
+- Its corresponding mask path is `"Masks/D/id_D_frame_00002160_img.png"`.
+
+### Download
+
+[FaroPigReID-33 Dataset on Kaggle](https://www.kaggle.com/datasets/yudongyan/faropigreid)
+
+## License
+
+Both datasets are licensed under the Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0).
+
+You are free to use, share, and modify the datasets for non-commercial purposes only.
+
+Full license details: [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
+
+## Citation
+
+To be added after publishing.
