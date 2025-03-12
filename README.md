@@ -101,8 +101,7 @@ Format:
 **Note**: In the \<path\> column, we only listed the path of the images. If you need the path of the masks, please change "Images" to "Masks".
 
 **Example**:
-- `"Images/D/id_D_frame_00002160_img.png"` is the image path of the identity D.
-- Its corresponding mask path is `"Masks/D/id_D_frame_00002160_img.png"`.
+- `"Images/D/id_D_frame_00002160_img.png"` is the image path of the identity D, and Its corresponding mask path is `"Masks/D/id_D_frame_00002160_img.png"`.
 
 ### Download
 
