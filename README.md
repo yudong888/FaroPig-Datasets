@@ -57,20 +57,20 @@ The dataset FaroPigReID-33 is created for the pig reidentification task introduc
 ### Dataset Structure
 
 The final dataset consists of frames taken from video clips, annotation, and cropped images of every identity and its corresponding masks.
-···plaintext
+```plaintext
 /FaroPigReID-33/
 │── Galleries/
 │ ├── 2023-09-28T15_59_48Z-left_2160_9720/
-│ ├── images/
-│ ├── A/
-│ ├── B/
-│ ...
-│ ├── I/
-│ ├── masks/
-│ ├── A/
-│ ├── B/
-│ ...
-│ ├── I/
+│    ├── images/
+│       ├── A/
+│       ├── B/
+│       ...
+│       ├── I/
+│    ├── masks/
+│       ├── A/
+│       ├── B/
+│       ...
+│       ├── I/
 │ ├── 2024-01-05T09_43_39Z-left_14700_29369/
 │ ├── 2024-02-27T14_54_53Z-left_15660_27000/
 │── Frames/
@@ -78,7 +78,7 @@ The final dataset consists of frames taken from video clips, annotation, and cro
 │ ├── 2024-01-05T09_43_39Z-left_14700_29369/
 │ ├── 2024-02-27T14_54_53Z-left_15660_27000/
 │── dataset_im_filtered_ssl.csv
-···
+```
 
 - **Galleries**: Directory of the images cropped according to the bounding boxes of the individuals and its corresponding masks. Inside the images and masks folder, all the images and masks are categorized according to identity label.
 - **Frames**: The original images extracted from the videos.
