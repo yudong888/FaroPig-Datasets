@@ -89,7 +89,8 @@ FaroPigReID-33
 All the annotations have been saved in `dataset_im_filtered_ssl.csv`.
 
 Format:
-<path> <label> <width> <height> <xmin> <xmax> <ymin> <ymax> <valid> <main_path>
+\<path\> \<label\> \<width\> \<height\> \<xmin\> \<xmax\> \<ymin\> \<ymax\> \<valid\> \<main_path\>
+
 - **\<path\>**: The image path corresponding to the annotation.
 - **\<label\>**: The identity label of the individual.
 - **\<width\> \<height\>**: Dimension of the bounding box of the individual.
