@@ -14,7 +14,6 @@ All images and their corresponding annotations are randomly divided into three f
 
 
 ```plaintext
-.
 /FaroPigSeg/
 ├── train/
 │   ├── images/
@@ -58,7 +57,7 @@ The dataset FaroPigReID-33 is created for the pig reidentification task introduc
 ### Dataset Structure
 
 The final dataset consists of frames taken from video clips, annotation, and cropped images of every identity and its corresponding masks.
-···
+···plaintext
 /FaroPigReID-33/
 │── Galleries/
 │ ├── 2023-09-28T15_59_48Z-left_2160_9720/
