@@ -12,21 +12,8 @@ The dataset FaroPigSeg is created for the instance segmentation task introduced 
 
 All images and their corresponding annotations are randomly divided into three folders according to a certain ratio: train, val, and test.
 
-/FaroPigSeg/
-│── train/
-│ ├── images/
-│ ├── labels/
-│── val/
-│ ├── images/
-│ ├── labels/
-│── test/
-│ ├── images/
-│ ├── labels/
-│── data.yaml
-
-
-```/FaroPigSeg/
 .
+/FaroPigSeg/
 ├── train/
 │   ├── images/
 │   └── labels/
