@@ -12,9 +12,8 @@ The dataset FaroPigSeg is created for the instance segmentation task introduced 
 
 All images and their corresponding annotations are randomly divided into three folders according to a certain ratio: train, val, and test.
 
-
 ```plaintext
-/FaroPigSeg/
+FaroPigSeg
 ├── train/
 │   ├── images/
 │   └── labels/
@@ -26,8 +25,6 @@ All images and their corresponding annotations are randomly divided into three f
 │   └── labels/
 └── data.yaml
 ```
-
-
 - **train**: Contains 70% of all the images and corresponding labels.
 - **val**: Contains 20% of all the images and corresponding labels.
 - **test**: Contains 10% of all the images and corresponding labels.
@@ -39,8 +36,6 @@ Each annotation file corresponds to an image file (same name, `.txt` extension).
 
 Format:
 <class_id> <x1> <y1> <x2> <y2> ... <xn> <yn>
-
-
 - **\<class_id\>**: Integer representing the class index (always 0 as we only have one class).
 - **\<x, y\> pairs**: Normalized (0 to 1) polygon coordinates outlining the object.
 
@@ -52,7 +47,7 @@ Format:
 
 The dataset FaroPigReID-33 is created for the pig reidentification task introduced in the paper. It is taken from three video clips with around 1620, 16200, and 2700 frames respectively, and it has 33 valid identities in total. The process of creating the dataset is semi-automatic by combining SAM with the point tracker Co-tracker, and then a filtering procedure was conducted to remove the individuals with low diversity and richness. At last, we capped the dataset with 4000 frames per individual by uniformly selecting the frames of every individual in the temporal axis. The final dataset contains 33 identities, with around 300 to 4,000 masks per individual, as shown in the following figure.
 
-![Bar Chart](media/image1.png)
+![Bar Chart](dataset_4000.png)
 
 ### Dataset Structure
 
@@ -79,8 +74,6 @@ FaroPigReID-33
 │   └── 2024-02-27T14_54_53Z-left_15660_27000/
 └── dataset_im_filtered_ssl.csv
 ```
-
-
 - **Galleries**: Directory of the images cropped according to the bounding boxes of the individuals and its corresponding masks. Inside the images and masks folder, all the images and masks are categorized according to identity label.
 - **Frames**: The original images extracted from the videos.
 - **dataset_im_filtered_ssl.csv**: The collection of all the annotations.
@@ -91,7 +84,6 @@ All the annotations have been saved in `dataset_im_filtered_ssl.csv`.
 
 Format:
 <path> <label> <width> <height> <xmin> <xmax> <ymin> <ymax> <valid> <main_path>
-
 - **\<path\>**: The image path corresponding to the annotation.
 - **\<label\>**: The identity label of the individual.
 - **\<width\> \<height\>**: Dimension of the bounding box of the individual.
