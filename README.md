@@ -1,10 +1,14 @@
 # FaroPigSeg & FaroPigReID-33: Datasets for Pig Segmentation and Reidentification
 
-FaroPigSeg & FaroPigReID-33 are public datasets for pig segmentation and reidentification introduced in the paper [Housed Pig Identification and Tracking for Precision Livestock Farming](https://web.ub.edu/en/home). Please note: Our dataset is to be used for research purposes only, and any commercial use is strictly prohibited. If you find our dataset useful, please cite our article.
+FaroPigSeg & FaroPigReID-33 are public datasets for pig segmentation and reidentification introduced in the paper [Housed Pig Identification and Tracking for Precision Livestock Farming](https://web.ub.edu/en/home). 
 
 The datasets were created with the support of the University of Barcelona and AGCO Corporation, and all the images were collected in a commercial pig finishing farm. The right to collect data and make datasets public has been granted by the company and the farmers.
 
-**Note**: Both of the datasets are fully uploaded to our service. Here on GitHub we only keep several sample for demonstrating the dataset structure. For full datasets, please go to [FaroPigSeg](https://data.chalearnlap.cvc.uab.cat/FaroPig/FaroPigSeg.zip) (150MB) and [FaroPigReID-33](https://data.chalearnlap.cvc.uab.cat/FaroPig/FaroPigReId.zip) (12GB). 
+**Note**: 
+
+Our dataset is to be used for research purposes only, and any commercial use is strictly prohibited. If you find our dataset useful, please cite our article with the citation below.
+
+Both datasets are fully uploaded to our service, and here on GitHub we only keep several sample for demonstrating the dataset structure. For full datasets, please click [FaroPigSeg](https://data.chalearnlap.cvc.uab.cat/FaroPig/FaroPigSeg.zip) (150MB) and [FaroPigReID-33](https://data.chalearnlap.cvc.uab.cat/FaroPig/FaroPigReId.zip) (12GB). 
 
 ## FaroPigSeg
 
@@ -45,7 +49,7 @@ Format:
 
 ### Download
 
-[FaroPigSeg Dataset](https://data.chalearnlap.cvc.uab.cat/FaroPig/FaroPigSeg.zip)
+[FaroPigSeg Dataset](https://data.chalearnlap.cvc.uab.cat/FaroPig/FaroPigSeg.zip)(150MB)
 
 ## FaroPigReID-33
 
@@ -109,7 +113,7 @@ Format:
 
 ### Download
 
-[FaroPigReID-33 Dataset on Kaggle](https://data.chalearnlap.cvc.uab.cat/FaroPig/FaroPigReId.zip)
+[FaroPigReID-33 Dataset](https://data.chalearnlap.cvc.uab.cat/FaroPig/FaroPigReId.zip)(12GB)
 
 ## License
 
@@ -122,3 +126,19 @@ Full license details: [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/
 ## Citation
 
 To be added after publishing.
+
+```plaintext
+@article{Compte:ESA:2015,
+author={Albert Compte and Yudong Yan and Xavier Cortés and Sergio Escalera and Julio C. S.
+Jacques-Junior},
+journal={Expert Systems with Application},
+title={Housed Pig Identification and Tracking for Precision Livestock
+Farming},
+year={2025},
+volume={},
+number={},
+pages={},
+doi={},
+ISSN={}
+}
+```
