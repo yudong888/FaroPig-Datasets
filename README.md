@@ -10,7 +10,7 @@ The datasets were created with the support of the University of Barcelona and AG
 
 The dataset FaroPigSeg is created for the instance segmentation task introduced in the paper. It contains 1518 annotated pig images, and more than 16,000 pig instances were labeled in total. The images were collected from different pens of the farm, and the labels are in the YOLO format.
 
-![FaroPigSeg Image Samples](SegSamples.png)
+![FaroPigSeg Image Samples](FaroPigSeg/SegSamples.png)
 
 ### Dataset Structure
 
@@ -52,11 +52,11 @@ Format:
 ## FaroPigReID-33
 
 The dataset FaroPigReID-33 is created for the pig reidentification task introduced in the paper. It is taken from three video clips with around 1620, 16200, and 2700 frames respectively, and it has 33 valid identities in total. The process of creating the dataset is semi-automatic by combining SAM with the point tracker Co-tracker, and then a filtering procedure was conducted to remove the individuals with low diversity and richness. 
-![FaroPigReID Image Samples](ReIDSamples.png)
+![FaroPigReID Image Samples](FaroPigReID-33/ReIDSamples.png)
 
 At last, we capped the dataset with 4000 frames per individual by uniformly selecting the frames of every individual in the temporal axis. The final dataset contains 33 identities, with around 300 to 4,000 masks per individual, as shown in the following figure.
 
-![Bar Chart](dataset_4000.png)
+![Bar Chart](FaroPigReID-33dataset_4000.png)
 
 ### Dataset Structure
 
