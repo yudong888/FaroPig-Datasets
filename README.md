@@ -107,6 +107,10 @@ Format:
 - **\<valid\>**: Validity of the annotation (1.0=valid, 0.0=invalid). It indicates a human-based annotation selection according to the visibility of the pig, the quality of the annotation and its size.
 - **\<main_path\>**: The frame path corresponding to the annotation.
 
+In addition, for `dataset_im_filtered_ssl_10folds_allbase.csv`
+- **\<folds\>**:
+- **\<split_x\>**:
+
 **Note**: In the \<path\> column, we only listed the path of the images. If you need the path of the masks, please change "Images" to "Masks".
 
 **Example**:
