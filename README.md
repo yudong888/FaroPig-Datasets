@@ -24,7 +24,7 @@ FaroPigSeg
 ├── val/
 │   ├── images/
 │   └── labels/
-├──  test/
+├── test/
 │   ├── images/
 │   └── labels/
 └── data.yaml
