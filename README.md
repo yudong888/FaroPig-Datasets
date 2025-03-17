@@ -86,7 +86,7 @@ FaroPigReID-33
 - **dataset_im_filtered_ssl.csv**: The collection of all the annotations.
 - **dataset_im_filtered_ssl_10folds_allbase.csv**: The collection of all the annotations with 10-folds study that conducted in the paper.
 
-The elements from the Galleries and Frames directories are distributed by video clips, using the *{year}-{month}-{day}T{hour}_{minute}_{second}Z-{camera}_{start_frame}_{end_frame}/* notation.
+The elements from the Galleries and Frames directories are distributed by video clips, using the `{year}-{month}-{day}T{hour}_{minute}_{second}Z-{camera}_{start_frame}_{end_frame}/` notation.
 
 ### Annotation Format
 
