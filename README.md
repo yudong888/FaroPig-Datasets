@@ -1,10 +1,10 @@
 # FaroPigSeg & FaroPigReID-33: Datasets for Pig Segmentation and Reidentification
 
-FaroPigSeg & FaroPigReID-33 are public datasets for pig segmentation and reidentification introduced in the paper [Housed Pig Identification and Tracking for Precision Livestock Farming](https://web.ub.edu/en/home).
+FaroPigSeg & FaroPigReID-33 are public datasets for pig segmentation and reidentification introduced in the paper [Housed Pig Identification and Tracking for Precision Livestock Farming](https://web.ub.edu/en/home). Please note: Our dataset is to be used for research purposes only, and any commercial use is strictly prohibited. If you find our dataset useful, please cite our article.
 
 The datasets were created with the support of the University of Barcelona and AGCO Corporation, and all the images were collected in a commercial pig finishing farm. The right to collect data and make datasets public has been granted by the company and the farmers.
 
-**Note**: Both of the datasets are fully uploaded on Kaggle. Here on GitHub we only keep several sample for demonstrating the dataset structure. For full datasets, please go to [FaroPigSeg](https://www.kaggle.com/datasets/yudongyan/faropigseg) and [FaroPigReID-33](https://www.kaggle.com/datasets/yudongyan/faropigreid-33). 
+**Note**: Both of the datasets are fully uploaded to our service. Here on GitHub we only keep several sample for demonstrating the dataset structure. For full datasets, please go to [FaroPigSeg](https://data.chalearnlap.cvc.uab.cat/FaroPig/FaroPigSeg.zip) (150MB) and [FaroPigReID-33](https://data.chalearnlap.cvc.uab.cat/FaroPig/FaroPigReId.zip) (12GB). 
 
 ## FaroPigSeg
 
@@ -45,7 +45,7 @@ Format:
 
 ### Download
 
-[FaroPigSeg Dataset on Kaggle](https://www.kaggle.com/datasets/yudongyan/faropigseg)
+[FaroPigSeg Dataset](https://data.chalearnlap.cvc.uab.cat/FaroPig/FaroPigSeg.zip)
 
 ## FaroPigReID-33
 
@@ -77,12 +77,16 @@ FaroPigReID-33
 │   ├── 2023-09-28T15_59_48Z-left_2160_9720/
 │   ├── 2024-01-05T09_43_39Z-left_14700_29369/
 │   └── 2024-02-27T14_54_53Z-left_15660_27000/
-└── dataset_im_filtered_ssl.csv
+├── dataset_im_filtered_ssl.csv
+└── 10-folds.csv (to be added)
 ```
 
 - **Galleries**: Directory of the images cropped according to the bounding boxes of the individuals and its corresponding masks. Inside the images and masks folder, all the images and masks are categorized according to identity label.
 - **Frames**: The original images extracted from the videos.
 - **dataset_im_filtered_ssl.csv**: The collection of all the annotations.
+- **10-folds.csv (to be added)**: 
+
+The elements from the Galleries and Frames directories are distributed by video clips, using the {year}-{month}-{day}T{hour}_{minute}_{second}Z-{camera}_{start_frame}_{end_frame}/ notation.
 
 ### Annotation Format
 
@@ -105,7 +109,7 @@ Format:
 
 ### Download
 
-[FaroPigReID-33 Dataset on Kaggle](https://www.kaggle.com/datasets/yudongyan/faropigreid-33)
+[FaroPigReID-33 Dataset on Kaggle](https://data.chalearnlap.cvc.uab.cat/FaroPig/FaroPigReId.zip)
 
 ## License
 
