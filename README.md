@@ -56,7 +56,7 @@ The dataset FaroPigReID-33 is created for the pig reidentification task introduc
 
 At last, we capped the dataset with 4000 frames per individual by uniformly selecting the frames of every individual in the temporal axis. The final dataset contains 33 identities, with around 300 to 4,000 masks per individual, as shown in the following figure.
 
-![Bar Chart](FaroPigReID-33dataset_4000.png)
+![Bar Chart](FaroPigReID-33/dataset_4000.png)
 
 ### Dataset Structure
 
