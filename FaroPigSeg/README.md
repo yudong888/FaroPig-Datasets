@@ -1,10 +1,10 @@
-# FaroPigSeg & FaroPigReID-33: Datasets for Pig Segmentation and Reidentification
+# FaroPigSeg: Dataset for Pig Segmentation
 
-FaroPigSeg & FaroPigReID-33 are public datasets for pig segmentation and reidentification introduced in the paper [Housed Pig Identification and Tracking for Precision Livestock Farming](https://web.ub.edu/en/home). Both datasets are fully uploaded to our service, and here on GitHub we only keep several sample for demonstrating the dataset structure. For full datasets, please click [FaroPigSeg (150MB)](https://data.chalearnlap.cvc.uab.cat/FaroPig/FaroPigSeg.zip) and [FaroPigReID-33 (12GB)](https://data.chalearnlap.cvc.uab.cat/FaroPig/FaroPigReId.zip). 
+FaroPigSeg is public dataset for pig segmentation introduced in the paper [Housed Pig Identification and Tracking for Precision Livestock Farming](https://web.ub.edu/en/home). The datasets is fully uploaded to our server, and here on GitHub we only keep several sample for demonstrating the dataset structure. For full dataset, please click [FaroPigSeg (150MB)](https://data.chalearnlap.cvc.uab.cat/FaroPig/FaroPigSeg.zip).
 
 **Note**: Our dataset is to be used for research purposes only, and any commercial use is strictly prohibited. If you find our dataset useful, please cite our article with the citation below.
 
-The datasets were created with the support of the University of Barcelona and AGCO Corporation, and all the images were collected in a commercial pig finishing farm. The right to collect data and make datasets public has been granted by the company and the farmers.
+The dataset was created with the support of the University of Barcelona and AGCO Corporation, and all the images were collected in a commercial pig finishing farm. The right to collect data and make datasets public has been granted by the company and the farmers.
 
 ## FaroPigSeg
 
@@ -48,77 +48,6 @@ Format:
 ### Download
 
 [FaroPigSeg Dataset](https://data.chalearnlap.cvc.uab.cat/FaroPig/FaroPigSeg.zip) (150MB)
-
-## FaroPigReID-33
-
-The dataset FaroPigReID-33 is created for the pig reidentification task introduced in the paper. It is taken from three video clips with around 1620, 16200, and 2700 frames respectively, and it has 33 valid identities in total. The process of creating the dataset is semi-automatic by combining SAM with the point tracker Co-tracker, and then a filtering procedure was conducted to remove the individuals with low diversity and richness. 
-![FaroPigReID Image Samples](ReIDSamples.png)
-
-At last, we capped the dataset with 4000 frames per individual by uniformly selecting the frames of every individual in the temporal axis. The final dataset contains 33 identities, with around 300 to 4,000 masks per individual, as shown in the following figure.
-
-![Bar Chart](dataset_4000.png)
-
-### Dataset Structure
-
-The final dataset consists of frames taken from video clips, annotation, and cropped images of every identity and its corresponding masks.
-
-```plaintext
-FaroPigReID-33
-├── Galleries/
-│   ├── 2023-09-28T15_59_48Z-left_2160_9720/
-│   │   ├── Images/
-│   │   │   ├── A/
-│   │   │   ├── B/
-│   │   │   │   ...
-│   │   │   └── I/
-│   │   └── Masks/
-│   │       ├── A/
-│   │       ├── B/
-│   │       │   ...
-│   │       └── I/
-│   ├── 2024-01-05T09_43_39Z-left_14700_29369/
-│   └── 2024-02-27T14_54_53Z-left_15660_27000/
-├── Frames/
-│   ├── 2023-09-28T15_59_48Z-left_2160_9720/
-│   ├── 2024-01-05T09_43_39Z-left_14700_29369/
-│   └── 2024-02-27T14_54_53Z-left_15660_27000/
-├── dataset_im_filtered_ssl.csv
-└── dataset_im_filtered_ssl_10folds_allbase.csv
-```
-
-- **Galleries**: Directory of the images cropped according to the bounding boxes of the individuals and its corresponding masks. Inside the images and masks folder, all the images and masks are categorized according to identity label.
-- **Frames**: The original images extracted from the videos.
-- **dataset_im_filtered_ssl.csv**: The collection of all the annotations.
-- **dataset_im_filtered_ssl_10folds_allbase.csv**: The collection of all the annotations with 10-folds study that conducted in the paper.
-
-The elements from the Galleries and Frames directories are distributed by video clips, using the `{year}-{month}-{day}T{hour}_{minute}_{second}Z-{camera}_{start_frame}_{end_frame}/` notation.
-
-### Annotation Format
-
-All the annotations have been saved in `dataset_im_filtered_ssl.csv`.
-
-Format:
-\<path\> \<label\> \<width\> \<height\> \<xmin\> \<xmax\> \<ymin\> \<ymax\> \<valid\> \<main_path\>
-
-- **\<path\>**: The image path corresponding to the annotation.
-- **\<label\>**: The identity label of the individual.
-- **\<width\> \<height\>**: Dimension of the bounding box of the individual.
-- **\<xmin\> \<xmax\> \<ymin\> \<ymax\>**: Bounding box location of the individual in the frame.
-- **\<valid\>**: Validity of the annotation (1.0=valid, 0.0=invalid). It indicates a human-based annotation selection according to the visibility of the pig, the quality of the annotation and its size.
-- **\<main_path\>**: The frame path corresponding to the annotation.
-
-In addition, for `dataset_im_filtered_ssl_10folds_allbase.csv`
-- **\<folds\>**:
-- **\<split_x\>**:
-
-**Note**: In the \<path\> column, we only listed the path of the images. If you need the path of the masks, please change "Images" to "Masks".
-
-**Example**:
-- `"Images/D/id_D_frame_00002160_img.png"` is the image path of the identity D, and Its corresponding mask path is `"Masks/D/id_D_frame_00002160_img.png"`.
-
-### Download
-
-[FaroPigReID-33 Dataset](https://data.chalearnlap.cvc.uab.cat/FaroPig/FaroPigReId.zip) (12GB)
 
 ## License
 

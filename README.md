@@ -1,8 +1,8 @@
 # FaroPigSeg & FaroPigReID-33: Datasets for Pig Segmentation and Reidentification
 
-FaroPigSeg & FaroPigReID-33 are public datasets for pig segmentation and reidentification introduced in the paper [Housed Pig Identification and Tracking for Precision Livestock Farming](https://web.ub.edu/en/home). Both datasets are fully uploaded to our service, and here on GitHub we only keep several sample for demonstrating the dataset structure. For full datasets, please click [FaroPigSeg (150MB)](https://data.chalearnlap.cvc.uab.cat/FaroPig/FaroPigSeg.zip) and [FaroPigReID-33 (12GB)](https://data.chalearnlap.cvc.uab.cat/FaroPig/FaroPigReId.zip). 
+FaroPigSeg & FaroPigReID-33 are public datasets for pig segmentation and reidentification introduced in the paper [Housed Pig Identification and Tracking for Precision Livestock Farming](https://web.ub.edu/en/home). Both datasets are fully uploaded to our server, and here on GitHub we only keep several sample for demonstrating the dataset structure. For full datasets, please click [FaroPigSeg (150MB)](https://data.chalearnlap.cvc.uab.cat/FaroPig/FaroPigSeg.zip) and [FaroPigReID-33 (12GB)](https://data.chalearnlap.cvc.uab.cat/FaroPig/FaroPigReId.zip). 
 
-**Note**: Our dataset is to be used for research purposes only, and any commercial use is strictly prohibited. If you find our dataset useful, please cite our article with the citation below.
+**Note**: Our datasets are to be used for research purposes only, and any commercial use is strictly prohibited. If you find our datasets useful, please cite our article with the citation below.
 
 The datasets were created with the support of the University of Barcelona and AGCO Corporation, and all the images were collected in a commercial pig finishing farm. The right to collect data and make datasets public has been granted by the company and the farmers.
 
