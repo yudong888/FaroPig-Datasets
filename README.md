@@ -78,13 +78,13 @@ FaroPigReID-33
 │   ├── 2024-01-05T09_43_39Z-left_14700_29369/
 │   └── 2024-02-27T14_54_53Z-left_15660_27000/
 ├── dataset_im_filtered_ssl.csv
-└── 10-folds.csv (to be added)
+└── dataset_im_filtered_ssl_10folds_allbase.csv
 ```
 
 - **Galleries**: Directory of the images cropped according to the bounding boxes of the individuals and its corresponding masks. Inside the images and masks folder, all the images and masks are categorized according to identity label.
 - **Frames**: The original images extracted from the videos.
 - **dataset_im_filtered_ssl.csv**: The collection of all the annotations.
-- **10-folds.csv (to be added)**: 
+- **dataset_im_filtered_ssl_10folds_allbase.csv**: The collection of all the annotations with 10-folds study that conducted in the paper.
 
 The elements from the Galleries and Frames directories are distributed by video clips, using the {year}-{month}-{day}T{hour}_{minute}_{second}Z-{camera}_{start_frame}_{end_frame}/ notation.
 
