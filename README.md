@@ -1,14 +1,10 @@
 # FaroPigSeg & FaroPigReID-33: Datasets for Pig Segmentation and Reidentification
 
-FaroPigSeg & FaroPigReID-33 are public datasets for pig segmentation and reidentification introduced in the paper [Housed Pig Identification and Tracking for Precision Livestock Farming](https://web.ub.edu/en/home). 
+FaroPigSeg & FaroPigReID-33 are public datasets for pig segmentation and reidentification introduced in the paper [Housed Pig Identification and Tracking for Precision Livestock Farming](https://web.ub.edu/en/home). Both datasets are fully uploaded to our service, and here on GitHub we only keep several sample for demonstrating the dataset structure. For full datasets, please click [FaroPigSeg(150MB)](https://data.chalearnlap.cvc.uab.cat/FaroPig/FaroPigSeg.zip) and [FaroPigReID-33(12GB)](https://data.chalearnlap.cvc.uab.cat/FaroPig/FaroPigReId.zip). 
+
+**Note**: Our dataset is to be used for research purposes only, and any commercial use is strictly prohibited. If you find our dataset useful, please cite our article with the citation below.
 
 The datasets were created with the support of the University of Barcelona and AGCO Corporation, and all the images were collected in a commercial pig finishing farm. The right to collect data and make datasets public has been granted by the company and the farmers.
-
-**Note**: 
-
-Our dataset is to be used for research purposes only, and any commercial use is strictly prohibited. If you find our dataset useful, please cite our article with the citation below.
-
-Both datasets are fully uploaded to our service, and here on GitHub we only keep several sample for demonstrating the dataset structure. For full datasets, please click [FaroPigSeg](https://data.chalearnlap.cvc.uab.cat/FaroPig/FaroPigSeg.zip) (150MB) and [FaroPigReID-33](https://data.chalearnlap.cvc.uab.cat/FaroPig/FaroPigReId.zip) (12GB). 
 
 ## FaroPigSeg
 
@@ -49,7 +45,7 @@ Format:
 
 ### Download
 
-[FaroPigSeg Dataset](https://data.chalearnlap.cvc.uab.cat/FaroPig/FaroPigSeg.zip)(150MB)
+[FaroPigSeg Dataset](https://data.chalearnlap.cvc.uab.cat/FaroPig/FaroPigSeg.zip) (150MB)
 
 ## FaroPigReID-33
 
@@ -103,7 +99,7 @@ Format:
 - **\<label\>**: The identity label of the individual.
 - **\<width\> \<height\>**: Dimension of the bounding box of the individual.
 - **\<xmin\> \<xmax\> \<ymin\> \<ymax\>**: Bounding box location of the individual in the frame.
-- **\<valid\>**: Validity of the annotation (1.0=valid, 0.0=invalid).
+- **\<valid\>**: Validity of the annotation (1.0=valid, 0.0=invalid). It indicates a human-based annotation selection according to the visibility of the pig, the quality of the annotation and its size.
 - **\<main_path\>**: The frame path corresponding to the annotation.
 
 **Note**: In the \<path\> column, we only listed the path of the images. If you need the path of the masks, please change "Images" to "Masks".
@@ -113,7 +109,7 @@ Format:
 
 ### Download
 
-[FaroPigReID-33 Dataset](https://data.chalearnlap.cvc.uab.cat/FaroPig/FaroPigReId.zip)(12GB)
+[FaroPigReID-33 Dataset](https://data.chalearnlap.cvc.uab.cat/FaroPig/FaroPigReId.zip) (12GB)
 
 ## License
 
