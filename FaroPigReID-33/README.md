@@ -66,8 +66,8 @@ Format:
 - **\<main_path\>**: The frame path corresponding to the annotation.
 
 In addition, for `dataset_im_filtered_ssl_10folds_allbase.csv`
-- **\<folds\>**:
-- **\<split_x\>**:
+- **\<folds\>**: The fold in which the image is assigned. As we performed a 10-fold cross-validation, the fold assigned refers to the fold where the image belongs to the test set. 
+- **\<split_x\>**: Assignement of the image per each fold configuration (train, val, test). "x" stands for the fold configuration name. 
 
 **Note**: In the \<path\> column, we only listed the path of the images. If you need the path of the masks, please change "Images" to "Masks".
 
