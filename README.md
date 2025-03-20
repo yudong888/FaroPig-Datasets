@@ -1,6 +1,6 @@
 # FaroPigSeg & FaroPigReID-33: Datasets for Pig Segmentation and Reidentification
 
-FaroPigSeg & FaroPigReID-33 are public datasets for pig segmentation and reidentification introduced in the paper [Housed Pig Identification and Tracking for Precision Livestock Farming](https://web.ub.edu/en/home). Both datasets are fully uploaded to our server, and here on GitHub we only keep several sample for demonstrating the dataset structure. For full datasets, please click [FaroPigSeg (150MB)](https://data.chalearnlap.cvc.uab.cat/FaroPig/FaroPigSeg.zip) and [FaroPigReID-33 (12GB)](https://data.chalearnlap.cvc.uab.cat/FaroPig/FaroPigReId.zip). 
+FaroPigSeg & FaroPigReID-33 are public datasets for pig segmentation and reidentification introduced in the paper [Housed Pig Identification and Tracking for Precision Livestock Farming](https://github.com/yudong888/FaroPig-Datasets). Both datasets are fully uploaded to our server, and here on GitHub we only keep several sample for demonstrating the dataset structure. For full datasets, please click [FaroPigSeg (150MB)](https://data.chalearnlap.cvc.uab.cat/FaroPig/FaroPigSeg.zip) and [FaroPigReID-33 (12GB)](https://data.chalearnlap.cvc.uab.cat/FaroPig/FaroPigReId.zip). 
 
 **Note**: Our datasets are to be used for research purposes only, and any commercial use is strictly prohibited. If you find our datasets useful, please cite our article with the citation below.
 
@@ -129,21 +129,3 @@ You are free to use, share, and modify the datasets for non-commercial purposes 
 Full license details: [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
 
 ## Citation
-
-# To be added after publishing.
-
-# ```plaintext
-# @article{Compte:ESA:2015,
-# author={Albert Compte and Yudong Yan and Xavier Cortés and Sergio Escalera and Julio C. S.
-# Jacques-Junior},
-# journal={Expert Systems with Application},
-# title={Housed Pig Identification and Tracking for Precision Livestock
-# Farming},
-# year={2025},
-# volume={},
-# number={},
-# pages={},
-# doi={},
-# ISSN={}
-# }
-# ```
