@@ -130,20 +130,20 @@ Full license details: [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/
 
 ## Citation
 
-To be added after publishing.
+# To be added after publishing.
 
-```plaintext
-@article{Compte:ESA:2015,
-author={Albert Compte and Yudong Yan and Xavier Cortés and Sergio Escalera and Julio C. S.
-Jacques-Junior},
-journal={Expert Systems with Application},
-title={Housed Pig Identification and Tracking for Precision Livestock
-Farming},
-year={2025},
-volume={},
-number={},
-pages={},
-doi={},
-ISSN={}
-}
-```
+# ```plaintext
+# @article{Compte:ESA:2015,
+# author={Albert Compte and Yudong Yan and Xavier Cortés and Sergio Escalera and Julio C. S.
+# Jacques-Junior},
+# journal={Expert Systems with Application},
+# title={Housed Pig Identification and Tracking for Precision Livestock
+# Farming},
+# year={2025},
+# volume={},
+# number={},
+# pages={},
+# doi={},
+# ISSN={}
+# }
+# ```
